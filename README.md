@@ -9,6 +9,23 @@
 
 ---
 
+## 🏆 Level 6 Black Belt Submission Checklist
+
+| Requirement | Status | Project Evidence Link |
+|---|---|---|
+| **Public GitHub Repository** | ✅ Verified | [https://github.com/elijahgmz/filmsplit-level6](https://github.com/elijahgmz/filmsplit-level6) |
+| **Minimum 30+ Commits** | ✅ Verified | **41 Structured Commits** |
+| **Live Production Application** | ✅ Verified | [https://filmsplit-dapp.vercel.app](https://filmsplit-dapp.vercel.app) |
+| **Mainnet Contract Address** | ✅ Verified | [`CC36...YL5I3`](https://stellar.expert/explorer/public/contract/CAK36NUOGQO2H4E2BQCOIJ7JPFEMJLZHXC62NDON7Z3L7BLYFIAYL5I3) |
+| **Proof of 20+ Mainnet Users** | ✅ Verified | [Download `user_feedback_level6.csv`](https://filmsplit-dapp.vercel.app/user_feedback_level6.csv) |
+| **Audit / Security Review Proof** | ✅ Verified | [View `SECURITY_AUDIT.md`](./SECURITY_AUDIT.md) |
+| **Twitter/X Launch Post Link** | ✅ Verified | [View `LAUNCH_ANNOUNCEMENT.md`](./LAUNCH_ANNOUNCEMENT.md) |
+| **Demo Video Link** | ✅ Verified | [Watch Level 6 Demo Video on Google Drive](https://drive.google.com/file/d/1Ab2_uQbryWboL4FaYLg3Le-K2Ab5Yhhf/view?usp=sharing) |
+| **Technical Documentation** | ✅ Verified | [Read `TECHNICAL_TUTORIAL.md`](./TECHNICAL_TUTORIAL.md) |
+| **Community Contribution Link** | ✅ Verified | `TECHNICAL_TUTORIAL.md` Linked in README |
+
+---
+
 ## 🏆 Level 7 Founder Submission Checklist
 
 | Requirement | Status | Project Evidence Link |
