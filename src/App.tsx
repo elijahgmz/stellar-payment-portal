@@ -12,6 +12,9 @@ import { EventFeed, SorobanEventLog } from "./components/EventFeed";
 import { AnalyticsWidget } from "./components/AnalyticsWidget";
 import { FeedbackModal, FeedbackItem } from "./components/FeedbackModal";
 import { OnboardingHelper } from "./components/OnboardingHelper";
+import { FiatRampEstimator } from "./components/FiatRampEstimator";
+import { MilestoneScheduler } from "./components/MilestoneScheduler";
+import { PitchDeckModal } from "./components/PitchDeckModal";
 
 import { Film, Plus, Coins, Users, AlertTriangle, CheckCircle, ExternalLink, RefreshCw, Sparkles, Lock, ArrowUpRight } from "lucide-react";
 
@@ -82,13 +85,15 @@ export default function App() {
   const [events, setEvents] = useState<SorobanEventLog[]>([]);
   const [feedbackList, setFeedbackList] = useState<FeedbackItem[]>(INITIAL_FEEDBACK);
 
-  // UI Modal State
+  // UI Modal & Navigation State
+  const [activeSection, setActiveSection] = useState<string>("projects");
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showDistributeModal, setShowDistributeModal] = useState(false);
   const [showManageModal, setShowManageModal] = useState(false);
   const [showDisputeModal, setShowDisputeModal] = useState(false);
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
   const [showOnboardingModal, setShowOnboardingModal] = useState(false);
+  const [showPitchDeckModal, setShowPitchDeckModal] = useState(false);
 
   // Status & Feedback
   const [actionLoading, setActionLoading] = useState(false);
@@ -424,6 +429,9 @@ export default function App() {
         onConnectWallet={handleConnectWallet}
         onOpenFeedback={() => setShowFeedbackModal(true)}
         onOpenOnboarding={() => setShowOnboardingModal(true)}
+        onOpenPitchDeck={() => setShowPitchDeckModal(true)}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
       />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -473,6 +481,10 @@ export default function App() {
           totalCollaborators={totalCollaboratorsAll}
           contractAddress={CONTRACT_ADDRESS}
         />
+
+        {/* Active Section Feature Rendering */}
+        {activeSection === "escrow" && <MilestoneScheduler />}
+        {activeSection === "fiat" && <FiatRampEstimator />}
 
         {/* Main Interface Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
@@ -711,6 +723,10 @@ export default function App() {
 
       {showOnboardingModal && (
         <OnboardingHelper onClose={() => setShowOnboardingModal(false)} />
+      )}
+
+      {showPitchDeckModal && (
+        <PitchDeckModal onClose={() => setShowPitchDeckModal(false)} />
       )}
     </div>
   );
