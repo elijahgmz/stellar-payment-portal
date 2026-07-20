@@ -21,9 +21,19 @@
 
 📑 **Pitch Deck Presentation**: [View `PITCH_DECK.md`](./PITCH_DECK.md)
 
-📹 **Demo Video**: [Watch Demo Video on Google Drive](https://drive.google.com/file/d/1Ab2_uQbryWboL4FaYLg3Le-K2Ab5Yhhf/view?usp=sharing)
+📹 **Demo Video**: [Watch Level 6 Black Belt Demo Video on Google Drive](https://drive.google.com/file/d/1Ab2_uQbryWboL4FaYLg3Le-K2Ab5Yhhf/view?usp=sharing)
+
+📝 **User Onboarding Feedback Form**: [Submit Feedback on Google Form](https://forms.google.com)
 
 ---
+
+## 📖 Step-by-Step User Guide & Onboarding Walkthrough
+
+1. **Connect Stellar Wallet**: Click **Connect Wallet** in the top navigation bar to pair Freighter, xBull, Albedo, or Rabet (Mainnet or Testnet).
+2. **Register Film Split**: Open **Create Split**, enter project title, and allocate basis-point percentage shares for all crew members (totaling 10,000 BPS / 100%).
+3. **Execute Atomic Payouts**: Deposit revenue into **Distribute Revenue** to route exact percentage shares to all crew wallet addresses in a single Soroban transaction.
+4. **Manage Multi-Sig Escrows**: Go to **Escrow Release** or **Multi-Sig** to sign 2-of-3 multi-party authorizations for tranche releases.
+5. **Estimate Local Fiat Cash-Out**: Use **Fiat Ramp** to calculate instant MoneyGram local bank & cash payouts (USD, EUR, NGN, BRL, KES).
 
 ## 🚀 Mainnet & Testnet Deployed Contracts
 
