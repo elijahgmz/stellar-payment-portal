@@ -69,8 +69,8 @@ export const OnboardingHelper: React.FC<OnboardingHelperProps> = ({ onClose }) =
 
   const handleDownloadCSV = () => {
     const link = document.createElement("a");
-    link.href = "/user_feedback_level5.csv";
-    link.download = "user_feedback_level5.csv";
+    link.href = "/user_feedback_level7.csv";
+    link.download = "user_feedback_level7.csv";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

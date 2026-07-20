@@ -18,6 +18,9 @@ import { PitchDeckModal } from "./components/PitchDeckModal";
 import { MultiSigModal } from "./components/MultiSigModal";
 import { FeeSponsorshipWidget } from "./components/FeeSponsorshipWidget";
 import { SecurityAuditModal } from "./components/SecurityAuditModal";
+import { RoyaltyNftTokenizer } from "./components/RoyaltyNftTokenizer";
+import { StreamingRevenueApi } from "./components/StreamingRevenueApi";
+import { GrowthReportModal } from "./components/GrowthReportModal";
 
 import { Film, Plus, Coins, Users, AlertTriangle, CheckCircle, ExternalLink, RefreshCw, Sparkles, Lock, ArrowUpRight } from "lucide-react";
 
@@ -99,6 +102,7 @@ export default function App() {
   const [showOnboardingModal, setShowOnboardingModal] = useState(false);
   const [showPitchDeckModal, setShowPitchDeckModal] = useState(false);
   const [showSecurityAuditModal, setShowSecurityAuditModal] = useState(false);
+  const [showGrowthReportModal, setShowGrowthReportModal] = useState(false);
 
   // Status & Feedback
   const [actionLoading, setActionLoading] = useState(false);
@@ -436,6 +440,7 @@ export default function App() {
         onOpenOnboarding={() => setShowOnboardingModal(true)}
         onOpenPitchDeck={() => setShowPitchDeckModal(true)}
         onOpenSecurityAudit={() => setShowSecurityAuditModal(true)}
+        onOpenGrowthReport={() => setShowGrowthReportModal(true)}
         activeSection={activeSection}
         setActiveSection={setActiveSection}
         network={network}
@@ -492,6 +497,8 @@ export default function App() {
 
         {/* Active Section Feature Rendering */}
         <FeeSponsorshipWidget />
+        {activeSection === "nft" && <RoyaltyNftTokenizer />}
+        {activeSection === "streaming" && <StreamingRevenueApi />}
         {activeSection === "multisig" && <MultiSigModal />}
         {activeSection === "escrow" && <MilestoneScheduler />}
         {activeSection === "fiat" && <FiatRampEstimator />}
@@ -741,6 +748,10 @@ export default function App() {
 
       {showSecurityAuditModal && (
         <SecurityAuditModal onClose={() => setShowSecurityAuditModal(false)} />
+      )}
+
+      {showGrowthReportModal && (
+        <GrowthReportModal onClose={() => setShowGrowthReportModal(false)} />
       )}
     </div>
   );

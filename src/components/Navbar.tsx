@@ -1,5 +1,5 @@
 import React from "react";
-import { Film, Wallet, Landmark, Lock, Presentation, Activity, MessageSquareHeart, CheckCircle2, ShieldCheck, Key, Zap } from "lucide-react";
+import { Film, Wallet, Landmark, Lock, Presentation, Activity, MessageSquareHeart, CheckCircle2, ShieldCheck, Key, Zap, Ticket, Tv, TrendingUp } from "lucide-react";
 import { NetworkSelector } from "./NetworkSelector";
 
 interface NavbarProps {
@@ -11,6 +11,7 @@ interface NavbarProps {
   onOpenOnboarding: () => void;
   onOpenPitchDeck: () => void;
   onOpenSecurityAudit: () => void;
+  onOpenGrowthReport: () => void;
   activeSection: string;
   setActiveSection: (sec: string) => void;
   network: "mainnet" | "testnet";
@@ -26,6 +27,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenOnboarding,
   onOpenPitchDeck,
   onOpenSecurityAudit,
+  onOpenGrowthReport,
   activeSection,
   setActiveSection,
   network,
@@ -40,17 +42,17 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center space-x-3">
-          <div className="p-2.5 bg-gradient-to-br from-emerald-500 via-purple-600 to-amber-500 rounded-xl shadow-lg shadow-emerald-500/20">
-            <Film className="w-6 h-6 text-white" />
+          <div className="p-2.5 bg-gradient-to-br from-amber-400 via-orange-500 to-indigo-600 rounded-xl shadow-lg shadow-amber-500/20">
+            <Film className="w-6 h-6 text-slate-950 font-black" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
               <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
                 FilmSplit
               </span>
-              <span className="px-2 py-0.5 text-[10px] font-bold tracking-wide uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center space-x-1">
-                <ShieldCheck className="w-3 h-3" />
-                <span>Level 6 Mainnet</span>
+              <span className="px-2 py-0.5 text-[10px] font-bold tracking-wide uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full flex items-center space-x-1">
+                <TrendingUp className="w-3 h-3 text-amber-400" />
+                <span>Level 7 Founder</span>
               </span>
             </div>
             <p className="text-xs text-slate-400 hidden sm:block">
@@ -70,31 +72,31 @@ export const Navbar: React.FC<NavbarProps> = ({
             Projects
           </button>
           <button
+            onClick={() => setActiveSection("nft")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1 transition-all ${
+              activeSection === "nft" ? "bg-amber-500 text-slate-950" : "text-slate-400 hover:text-white"
+            }`}
+          >
+            <Ticket className="w-3 h-3" />
+            <span>Royalty NFT</span>
+          </button>
+          <button
+            onClick={() => setActiveSection("streaming")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1 transition-all ${
+              activeSection === "streaming" ? "bg-purple-600 text-white" : "text-slate-400 hover:text-white"
+            }`}
+          >
+            <Tv className="w-3 h-3" />
+            <span>Streaming API</span>
+          </button>
+          <button
             onClick={() => setActiveSection("multisig")}
             className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1 transition-all ${
-              activeSection === "multisig" ? "bg-purple-600 text-white" : "text-slate-400 hover:text-white"
+              activeSection === "multisig" ? "bg-emerald-600 text-white" : "text-slate-400 hover:text-white"
             }`}
           >
             <Key className="w-3 h-3" />
             <span>Multi-Sig</span>
-          </button>
-          <button
-            onClick={() => setActiveSection("escrow")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1 transition-all ${
-              activeSection === "escrow" ? "bg-amber-500 text-slate-950" : "text-slate-400 hover:text-white"
-            }`}
-          >
-            <Lock className="w-3 h-3" />
-            <span>Escrow</span>
-          </button>
-          <button
-            onClick={() => setActiveSection("fiat")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1 transition-all ${
-              activeSection === "fiat" ? "bg-emerald-600 text-white" : "text-slate-400 hover:text-white"
-            }`}
-          >
-            <Landmark className="w-3 h-3" />
-            <span>Fiat Ramp</span>
           </button>
         </div>
 
@@ -102,31 +104,22 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center space-x-2 sm:space-x-3">
           <NetworkSelector network={network} setNetwork={setNetwork} />
 
-          {/* Security Audit Button */}
+          {/* Growth Report Button */}
           <button
-            onClick={onOpenSecurityAudit}
-            className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-medium transition-all"
-          >
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span className="hidden xl:inline">Audit</span>
-          </button>
-
-          {/* Pitch Deck Button */}
-          <button
-            onClick={onOpenPitchDeck}
+            onClick={onOpenGrowthReport}
             className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 text-xs font-medium transition-all"
           >
-            <Presentation className="w-3.5 h-3.5" />
-            <span className="hidden xl:inline">Deck</span>
+            <TrendingUp className="w-3.5 h-3.5" />
+            <span className="hidden xl:inline">Growth Report</span>
           </button>
 
-          {/* 20+ User Onboarding Button */}
+          {/* 50+ New Mainnet Users Button */}
           <button
             onClick={onOpenOnboarding}
             className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-medium transition-all"
           >
             <Activity className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">20+ Mainnet Users</span>
+            <span className="hidden sm:inline">50+ NEW Mainnet Users</span>
           </button>
 
           {/* Connect Wallet */}
@@ -134,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center space-x-2 pl-2">
               <div className="hidden xl:flex flex-col items-end text-xs">
                 <span className="font-semibold text-slate-200">{truncatedAddress}</span>
-                <span className="text-emerald-400 font-mono">{parseFloat(xlmBalance).toLocaleString()} XLM</span>
+                <span className="text-amber-400 font-mono">{parseFloat(xlmBalance).toLocaleString()} XLM</span>
               </div>
               <button
                 onClick={onConnectWallet}
@@ -142,13 +135,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 <span className="xl:hidden">{truncatedAddress}</span>
-                <span className="hidden xl:inline">Mainnet Wallet</span>
+                <span className="hidden xl:inline">Founder Wallet</span>
               </button>
             </div>
           ) : (
             <button
               onClick={onConnectWallet}
-              className="flex items-center space-x-2 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-500 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white text-xs font-semibold transition-all shadow-lg shadow-emerald-500/20"
+              className="flex items-center space-x-2 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-indigo-600 hover:from-amber-400 hover:to-indigo-500 text-slate-950 font-bold text-xs transition-all shadow-lg shadow-amber-500/20"
             >
               <Wallet className="w-3.5 h-3.5" />
               <span>Connect Wallet</span>
