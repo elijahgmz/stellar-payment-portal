@@ -7,6 +7,27 @@
 
 🌐 **Live Production Application**: [https://filmsplit-dapp.vercel.app](https://filmsplit-dapp.vercel.app)
 
+---
+
+## 🏆 Level 7 Founder Submission Checklist
+
+| Requirement | Status | Project Evidence Link |
+|---|---|---|
+| **Public GitHub Repository** | ✅ Verified | [https://github.com/elijahgmz/filmsplit-level7](https://github.com/elijahgmz/filmsplit-level7) |
+| **Minimum 30+ Commits** | ✅ Verified | **41 Structured Commits** |
+| **Live Production Application** | ✅ Verified | [https://filmsplit-dapp.vercel.app](https://filmsplit-dapp.vercel.app) |
+| **Proof of 50+ NEW Mainnet Users** | ✅ Verified | [Download `user_feedback_level7.csv`](https://filmsplit-dapp.vercel.app/user_feedback_level7.csv) |
+| **Mainnet Transaction Proof** | ✅ Verified | 50 On-Chain Hashes Linked in CSV & README |
+| **User Feedback Sheet** | ✅ Verified | `user_feedback_level7.csv` Linked in README |
+| **Product Improvement Commit Links** | ✅ Verified | Linked in Table Below (`7588f92`, `7646aca`) |
+| **Monthly Growth Report** | ✅ Verified | [View `GROWTH_REPORT.md`](./GROWTH_REPORT.md) |
+| **Social Media Growth Proof (50+ Followers)** | ✅ Verified | [View `COMMUNITY_GROWTH.md`](./COMMUNITY_GROWTH.md) (64 Followers) |
+| **Product Update Posts** | ✅ Verified | `COMMUNITY_GROWTH.md` & `LAUNCH_ANNOUNCEMENT.md` |
+| **Community Contribution Proof** | ✅ Verified | [Read `TECHNICAL_TUTORIAL.md`](./TECHNICAL_TUTORIAL.md) |
+| **Updated Documentation** | ✅ Verified | Complete `README.md` + 6 Governance Docs |
+
+---
+
 📈 **Monthly Founder Growth Report**: [View `GROWTH_REPORT.md`](./GROWTH_REPORT.md)
 
 📊 **50+ NEW Mainnet Onboarded Users & Feedback**: [Download `user_feedback_level7.csv`](https://filmsplit-dapp.vercel.app/user_feedback_level7.csv)
