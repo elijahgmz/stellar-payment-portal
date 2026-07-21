@@ -96,6 +96,8 @@ As required, user details (Full Name, Email, Wallet Public Key, Rating, and Feed
 | *"Gas fees should be sponsored for freelancers."* | **Stellar Fee Sponsorship (FeeBump)**: Gasless transaction support for crew royalty claims. | [`ea7a8e8`](https://github.com/elijahgmz/filmsplit-level6/commit/ea7a8e8) |
 | *"Need developer tutorial for Soroban ecosystem contribution."* | **Ecosystem Technical Tutorial (`TECHNICAL_TUTORIAL.md`)**: Complete guide on building revenue distribution contracts. | [`b95461e`](https://github.com/elijahgmz/filmsplit-level6/commit/b95461e) |
 | *"Need an official product launch thread."* | **Launch Announcement Thread (`LAUNCH_ANNOUNCEMENT.md`)**: 5-part Twitter/X marketing thread. | [`b95461e`](https://github.com/elijahgmz/filmsplit-level6/commit/b95461e) |
+| *"Simplify the dashboard to reduce clutter and user confusion, and incorporate a walkthrough feature to guide new users."* | **Walkthrough Onboarding Tour**: Step-by-step interactive tour guide component assisting new crew members. | [`43feb61`](https://github.com/elijahgmz/filmsplit-level7/commit/43feb61) |
+| *"Implement a preview function that displays the precise revenue split breakdown before users finalize their agreements."* | **Split Breakdown Preview**: Real-time revenue distribution preview directly inside the Create Split modal. | [`43feb61`](https://github.com/elijahgmz/filmsplit-level7/commit/43feb61) |
 
 ---
 
